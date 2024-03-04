@@ -124,3 +124,31 @@ user = ["trojan", "trojan@gmail.com"];
 
 console.log(user[0]);
 
+//! Interfaces
+
+interface User {
+  name: string;
+  email: string;
+}
+
+const user1: User = { name: "mario", email: "mario@gmail.com" };
+
+interface Post {
+  title: string;
+  content: string;
+}
+
+const newPost: Post = { title: "Post One", content: "This is Post One" };
+
+//! interface as function argument
+
+function createPost(post: Post): void {
+  console.log(post.title);
+}
+
+createPost(newPost);
+
+//! interface with arrays
+
+let posts: Post[] = [];
+posts.push(newPost);

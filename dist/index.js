@@ -100,3 +100,13 @@ const [lat, log] = useCoords();
 let user;
 user = ["trojan", "trojan@gmail.com"];
 console.log(user[0]);
+const user1 = { name: "mario", email: "mario@gmail.com" };
+const newPost = { title: "Post One", content: "This is Post One" };
+//! interface as function argument
+function createPost(post) {
+    console.log(post.title);
+}
+createPost(newPost);
+//! interface with arrays
+let posts = [];
+posts.push(newPost);
