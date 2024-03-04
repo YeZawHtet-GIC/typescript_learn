@@ -79,3 +79,24 @@ function add(a, b) {
     return a + b;
 }
 add(1, 2);
+//! Tuples
+let tuple = ["hello", 200];
+tuple[0] = "world";
+tuple[1] = 300;
+console.log(tuple);
+//! Tuples examples
+let tuple2 = ["hello", 200];
+tuple2[0] = "world";
+tuple2[1] = 300;
+console.log(tuple2);
+function useCoords() {
+    // get coordinate
+    const lat = 100;
+    const log = 200;
+    return [lat, log];
+}
+const [lat, log] = useCoords();
+//! named tuple
+let user;
+user = ["trojan", "trojan@gmail.com"];
+console.log(user[0]);
