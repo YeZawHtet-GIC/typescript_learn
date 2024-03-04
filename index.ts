@@ -5,3 +5,11 @@ console.log(age);
 //tsc index.ts
 //!running compiled js file
 //node index.js
+
+let moon = 1;
+let sun = 1;
+let isNight = false;
+
+moon = "2";
+sun = "3";
+isNight = "false";
