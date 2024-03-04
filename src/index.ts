@@ -38,11 +38,33 @@ let users: { name: string; phone: number; isSingle: boolean } = {
 };
 console.log(users.name);
 
-
 //! type inference with object literal
-let brands={
-    name: "lugi",
-    age : 36,
-}
+let brands = {
+  name: "lugi",
+  age: 36,
+};
 brands.name = "logo";
 brands.age = 20;
+
+//! functions
+function addTwoNumber(number1: number, number2: number): number {
+  return number1 + number2;
+}
+const subtractTwoNumber = (number1: number, number2: number): number => {
+  return number1 - number2;
+};
+addTwoNumber(2, 3);
+subtractTwoNumber(2, 3);
+function addAllNumbers(items: number[]): number {
+  const total = items.reduce((a, c) => a + c, 0);
+  console.log(total);
+  return total;
+}
+addAllNumbers([1, 2, 3, 4, 6]);
+
+//!return type inference
+function formatGreeting(name: string, greeting: string) {
+  return `${name} ${greeting}`;
+}
+
+const result=formatGreeting("mario", "Hello");

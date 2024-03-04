@@ -39,3 +39,23 @@ let brands = {
 };
 brands.name = "logo";
 brands.age = 20;
+//! functions
+function addTwoNumber(number1, number2) {
+    return number1 + number2;
+}
+const subtractTwoNumber = (number1, number2) => {
+    return number1 - number2;
+};
+addTwoNumber(2, 3);
+subtractTwoNumber(2, 3);
+function addAllNumbers(items) {
+    const total = items.reduce((a, c) => a + c, 0);
+    console.log(total);
+    return total;
+}
+addAllNumbers([1, 2, 3, 4, 6]);
+//!return type inference
+function formatGreeting(name, greeting) {
+    return `${name} ${greeting}`;
+}
+const result = formatGreeting("mario", "Hello");
