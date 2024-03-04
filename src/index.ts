@@ -67,4 +67,30 @@ function formatGreeting(name: string, greeting: string) {
   return `${name} ${greeting}`;
 }
 
-const result=formatGreeting("mario", "Hello");
+const result = formatGreeting("mario", "Hello");
+
+//! any type in ts
+let something: any;
+something = "hello world";
+something = 200;
+something = true;
+
+// way 2
+let something2;
+something2 = "hello world";
+something2 = 200;
+something2 = true;
+
+//! any type in array
+
+let items: any[] = [1, 2, 3, 4, 5];
+items.push("hello world");
+items.push(200);
+items.push(true);
+
+//! function and any
+
+function add(a: any, b: any): any {
+  return a + b;
+}
+add(1, 2);
