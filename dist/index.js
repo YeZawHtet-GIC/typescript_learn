@@ -123,3 +123,17 @@ function formatBook(bookOne) {
     console.log(`${bookOne.name} is only ${bookOne.price}`);
 }
 formatBook(bookOne);
+//! Union Types
+let someId;
+someId = 2;
+someId = "3";
+let id;
+id = 3;
+id = "hello";
+//! Union types pitfall
+function swapIdType(id) {
+    console.log(id);
+    return id;
+}
+swapIdType(3);
+swapIdType("3");
