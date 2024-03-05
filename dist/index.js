@@ -137,3 +137,28 @@ function swapIdType(id) {
 }
 swapIdType(3);
 swapIdType("3");
+function swapTestNumber(num) {
+    if (typeof num === "number") {
+        //can use number methods and propertiesF
+        return num.toString();
+    }
+    else {
+        //can use string methods
+        return parseInt(num);
+    }
+}
+const strNum = swapTestNumber("200");
+const intNum = swapTestNumber(200);
+console.log(strNum, intNum);
+function logDetails(value) {
+    if (value.type == "user") {
+        console.log(value.name, value.email);
+    }
+    else {
+        console.log(value.name, value.age);
+    }
+}
+const user2 = { type: "user", name: "John", email: "john@example.com" };
+const person = { type: "person", name: "Alice", age: 30 };
+logDetails(user2); // Output: John john@example.com
+logDetails(person); // Output: Alice 30

@@ -198,3 +198,50 @@ function swapIdType(id: Id) {
 
 swapIdType(3);
 swapIdType("3");
+
+//! Type guards
+
+type testNumber = number | string;
+
+function swapTestNumber(num: testNumber) {
+  if (typeof num === "number") {
+    //can use number methods and propertiesF
+    return num.toString();
+  } else {
+    //can use string methods
+    return parseInt(num);
+  }
+}
+
+const strNum = swapTestNumber("200");
+const intNum = swapTestNumber(200);
+
+console.log(strNum, intNum);
+
+//! tagged Interfaces
+
+interface User {
+  type: "user";
+  name: string;
+  email: string;
+}
+
+interface Person {
+  type: "person";
+  name: string;
+  age: number;
+}
+
+function logDetails(value: User | Person): void {
+  if (value.type == "user") {
+    console.log(value.name, value.email);
+  } else {
+    console.log(value.name, value.age);
+  }
+}
+
+const user2: User = { type: "user", name: "John", email: "john@example.com" };
+const person: Person = { type: "person", name: "Alice", age: 30 };
+
+logDetails(user2);   // Output: John john@example.com
+logDetails(person); // Output: Alice 30
